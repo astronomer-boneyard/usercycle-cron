@@ -3,23 +3,25 @@ var gulp = require('gulp'),
     nodemon = require('gulp-nodemon'),
     del = require('del');
 
-var DIST = 'dist';
+var settings = {
+  dist: 'dist'
+};
 
 gulp.task('clean', function() {
-  del(DIST + '/*');
+  del(settings.dist + '/*');
 });
 
 gulp.task('babel', function () {
   return gulp.src('src/**/*.js')
     .pipe(babel())
-    .pipe(gulp.dest(DIST));
+    .pipe(gulp.dest(settings.dist));
 });
 
-gulp.task('default', ['clean', 'babel'], function() {
+gulp.task('watch', ['clean', 'babel'], function() {
   nodemon({
-    script: DIST + '/app.js',
+    script: settings.dist + '/app.js',
     ext: 'js',
-    ignore: [DIST + '/*'],
+    ignore: [settings.dist + '/*'],
     tasks: ['clean', 'babel'],
     env: {
       'NODE_ENV': 'development'
@@ -28,3 +30,5 @@ gulp.task('default', ['clean', 'babel'], function() {
     console.log('Retarted server...');
   });
 });
+
+gulp.task('build', ['clean', 'babel']);

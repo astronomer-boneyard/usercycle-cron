@@ -1,6 +1,6 @@
 {
   "name": "usercycle2-cron",
-  "description": "Job processor for usercycle",
+  "description": "Cron jobs for usercycle",
   "author": {
     "name": "schnie"
   },

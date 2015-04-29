@@ -50,6 +50,7 @@ let pruneAllViews = new CronJob('0 30 0 * * *', () => {
   createJob('pruneAllViews', {title: 'Prune all views'});
 }, null, true, tz);
 
-// let sendEmails = new CronJob('0 0 8 * * *', () => {
-//   createJob('')
-// });
+// 8:00 AM
+let sendEmails = new CronJob('0 0 8 * * *', () => {
+  createJob('sendSummaryEmails');
+}, null, true, tz);

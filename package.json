@@ -1,0 +1,24 @@
+{
+  "name": "usercycle2-cron",
+  "description": "Job processor for usercycle",
+  "author": {
+    "name": "schnie"
+  },
+  "version": "0.0.1",
+  "main": "dist/app.js",
+  "dependencies": {
+    "babel": "^5.0.12",
+    "config": "^1.12.0",
+    "cron": "^1.0.9",
+    "kue": "^0.8.12"
+  },
+  "devDependencies": {
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-babel": "^5.0.0",
+    "gulp-nodemon": "^2.0.2"
+  },
+  "scripts": {
+    "start": "gulp"
+  }
+}

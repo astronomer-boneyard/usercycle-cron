@@ -1,5 +1,8 @@
 {
-  "MONGO_URL": "mongodb://localhost:3001/meteor",
-  "REDIS_HOST": "127.0.0.1",
-  "REDIS_PORT": "6379"
+  "mongo_url": "mongodb://localhost:3001/meteor",
+  "redis": {
+    "host": "127.0.0.1",
+    "port": "6379",
+    "password": null
+  }
 }

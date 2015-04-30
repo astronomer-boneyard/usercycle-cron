@@ -10,7 +10,13 @@ import kue from 'kue';
 
 const tz = 'America/New_York';
 let CronJob = cron.CronJob;
-let queueConfig = { redis: { host: config.get('REDIS_HOST'), port: config.get('REDIS_PORT') } }
+let queueConfig = {
+  redis: {
+    host: config.get('redis.host'),
+    port: config.get('redis.port'),
+    auth: config.get('redis.password')
+  }
+};
 let queue = kue.createQueue(queueConfig);
 
 function createJob(jobType, data={}) {

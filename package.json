@@ -1,5 +1,6 @@
 {
   "name": "usercycle2-cron",
+  "mod-project-name": "cron",
   "description": "Cron jobs for usercycle",
   "author": {
     "name": "schnie"

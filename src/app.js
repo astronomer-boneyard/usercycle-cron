@@ -27,7 +27,6 @@ function createJob(jobType, data={}) {
   console.log(`Creating ${jobType} job:`, data);
   queue.create(jobType, data)
     .removeOnComplete(true)
-    .attempts(5)
     .backoff({delay: 60*1000, type:'exponential'})
     .save();
 }

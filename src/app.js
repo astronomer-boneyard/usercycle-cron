@@ -17,7 +17,11 @@ let queueConfig = {
     auth: config.get('redis.password')
   }
 };
+
 let queue = kue.createQueue(queueConfig);
+
+// Start GUI uiServer
+kue.app.listen(process.env.PORT || 8080);
 
 function createJob(jobType, data={}) {
   console.log(`Creating ${jobType} job:`, data);

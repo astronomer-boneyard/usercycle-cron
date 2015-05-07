@@ -8,10 +8,10 @@
   "version": "0.0.1",
   "main": "dist/app.js",
   "dependencies": {
-    "babel": "^5.0.12",
+    "babel": "^5.2.9",
     "config": "^1.12.0",
     "cron": "^1.0.9",
-    "kue": "^0.8.12"
+    "kue": "^0.9.3"
   },
   "devDependencies": {
     "del": "^1.1.1",

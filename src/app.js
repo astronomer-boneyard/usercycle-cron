@@ -11,6 +11,7 @@ import kue from 'kue';
 const tz = 'America/New_York';
 let CronJob = cron.CronJob;
 let queueConfig = {
+  jobEvents: false,
   redis: {
     host: config.get('redis.host'),
     port: config.get('redis.port'),
@@ -20,8 +21,8 @@ let queueConfig = {
 
 let queue = kue.createQueue(queueConfig);
 
-// Start GUI uiServer
-kue.app.listen(process.env.PORT || 8080);
+// Start GUI Server
+kue.app.listen(process.env.PORT || 8081);
 
 function createJob(jobType, data={}) {
   console.log(`Creating ${jobType} job:`, data);

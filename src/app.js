@@ -20,6 +20,7 @@ let queueConfig = {
 };
 
 let queue = kue.createQueue(queueConfig);
+queue.watchStuckJobs();
 
 // Start GUI Server
 kue.app.listen(process.env.PORT || 8081);

@@ -20,7 +20,7 @@
     "gulp-nodemon": "^2.0.2"
   },
   "scripts": {
-    "start": "gulp watch",
+    "dev": "gulp watch",
     "deploy": "gulp build && modulus deploy"
   }
 }
